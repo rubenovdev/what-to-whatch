@@ -6,8 +6,12 @@ import MainPage from './components/MainPage/MainPage.jsx';
 
 
 const init = () => {
+  const filmNames = [`Fantastic Beasts: The Crimes of Grindelwald`, `Bohemian Rhapsody`, `Macbeth`, `Aviator`];
+
   ReactDOM.render(
-      <MainPage />,
+      <MainPage
+        filmNames={filmNames}
+      />,
       document.querySelector(`#root`)
   );
 };

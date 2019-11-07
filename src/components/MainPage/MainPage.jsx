@@ -1,6 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const MainPage = () => {
+const MainPage = (props) => {
+  const {filmNames} = props;
+
   return (
     <>
       <div className="visually-hidden">
@@ -134,8 +137,7 @@ const MainPage = () => {
                 <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175"/>
               </div>
               <h3 className="small-movie-card__title">
-                <a className="small-movie-card__link" href="movie-page.html">Fantastic Beasts: The Crimes of
-                  Grindelwald</a>
+                <a className="small-movie-card__link" href="movie-page.html">{filmNames[0]}</a>
               </h3>
             </article>
 
@@ -145,7 +147,7 @@ const MainPage = () => {
                 <img src="img/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody" width="280" height="175"/>
               </div>
               <h3 className="small-movie-card__title">
-                <a className="small-movie-card__link" href="movie-page.html">Bohemian Rhapsody</a>
+                <a className="small-movie-card__link" href="movie-page.html">{filmNames[1]}</a>
               </h3>
             </article>
 
@@ -155,7 +157,7 @@ const MainPage = () => {
                 <img src="img/macbeth.jpg" alt="Macbeth" width="280" height="175"/>
               </div>
               <h3 className="small-movie-card__title">
-                <a className="small-movie-card__link" href="movie-page.html">Macbeth</a>
+                <a className="small-movie-card__link" href="movie-page.html">{filmNames[2]}</a>
               </h3>
             </article>
 
@@ -165,7 +167,7 @@ const MainPage = () => {
                 <img src="img/aviator.jpg" alt="Aviator" width="280" height="175"/>
               </div>
               <h3 className="small-movie-card__title">
-                <a className="small-movie-card__link" href="movie-page.html">Aviator</a>
+                <a className="small-movie-card__link" href="movie-page.html">{filmNames[3]}</a>
               </h3>
             </article>
 
@@ -356,6 +358,10 @@ const MainPage = () => {
       </div>
     </>
   );
+};
+
+MainPage.propTypes = {
+  filmNames: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default MainPage;
